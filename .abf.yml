@@ -1,4 +1,2 @@
-removed_sources:
-  defusedxml-0.4.1.tar.gz: 762ba44d849c0de9c99980be5137a163291d02b5
 sources:
-  defusedxml-0.5.0.tar.gz: 70ff80a849bbc2e9241daa1debda9f43e7fbdff0
+  defusedxml-0.6.0.tar.gz: 0bba33cc1e6d59f8fc71ceb8d12ad951072ad122
