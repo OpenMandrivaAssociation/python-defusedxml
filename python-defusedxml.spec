@@ -1,7 +1,7 @@
-%define modulename	defusedxml
+%define modulename defusedxml
 
 Name:		python-%{modulename}
-Version:	0.5.0
+Version:	0.6.0
 Release:	1
 Summary:	XML bomb protection for Python stdlib modules
 Group:		Development/Python
@@ -21,7 +21,7 @@ functions / classes from the right defusedxml module instead of the original
 module.
 
 %prep
-%setup -qn %{modulename}-%{version}
+%autosetup -n %{modulename}-%{version} -p1
 
 %build
 %py_build
