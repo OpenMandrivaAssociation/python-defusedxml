@@ -23,11 +23,11 @@ to benefit from the protection you just have to import and use the listed
 functions / classes from the right defusedxml module instead of the original
 module.
 
-%package -n python2-%{pypi_name}	 
+%package -n python2-%{modulename}	 
 Summary:        XML bomb protection for Python stdlib modules	 
 %{?python_provide:%python_provide python2-%{pypi_name}}	 
 	 
-%description -n python2-%{pypi_name}	 
+%description -n python2-%{modulename}
 The defusedxml package contains several Python-only workarounds and fixes for	 
 denial of service and other vulnerabilities in Python's XML libraries. In order	 
 to benefit from the protection you just have to import and use the listed	 
@@ -52,9 +52,7 @@ module. This is the Python 2 build.
 %doc CHANGES.txt LICENSE README.txt
 %{py_puresitedir}/*
 
-%files -n python2-%{pypi_name}	 
+%files -n python2-%{modulename} 
 %doc README.txt README.html CHANGES.txt	 
 %license LICENSE
 %{py2_puresitedir}/*
-#{python2_sitelib}/%{pypi_name}	 
-#{python2_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
