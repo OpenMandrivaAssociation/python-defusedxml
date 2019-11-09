@@ -54,6 +54,7 @@ module. This is the Python 2 build.
 
 %files -n python2-%{pypi_name}	 
 %doc README.txt README.html CHANGES.txt	 
-%license LICENSE	 
+%license LICENSE
+%{py2_puresitedir}/*
 #{python2_sitelib}/%{pypi_name}	 
 #{python2_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
