@@ -2,7 +2,7 @@
 
 Name:		python-%{modulename}
 Version:	0.6.0
-Release:	2
+Release:	3
 Summary:	XML bomb protection for Python stdlib modules
 Group:		Development/Python
 License:	Apache License
