@@ -2,7 +2,7 @@
 
 Name:		python-%{modulename}
 Version:	0.6.0
-Release:	3
+Release:	4
 Summary:	XML bomb protection for Python stdlib modules
 Group:		Development/Python
 License:	Apache License
@@ -12,7 +12,7 @@ BuildArch:	noarch
 BuildRequires:	python-setuptools
 BuildRequires:	python-devel
 BuildRequires:  python2-devel	 	 
-BuildRequires:  pythonegg(setuptools)		 
+BuildRequires:  python3dist(setuptools)	 
  
 #BuildRequires:	twill
 
