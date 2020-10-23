@@ -11,7 +11,8 @@ Source0:	https://files.pythonhosted.org/packages/source/d/defusedxml/defusedxml-
 BuildArch:	noarch
 BuildRequires:	python-setuptools
 BuildRequires:	python-devel
-BuildRequires:  python2-devel	 	 
+BuildRequires:  python2-devel
+BuildRequires:  python2dist(setuptools)
 BuildRequires:  python3dist(setuptools)	 
  
 #BuildRequires:	twill
