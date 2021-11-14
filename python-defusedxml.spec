@@ -1,13 +1,13 @@
 %define modulename defusedxml
 
 Name:		python-%{modulename}
-Version:	0.6.0
-Release:	4
+Version:	0.7.1
+Release:	1
 Summary:	XML bomb protection for Python stdlib modules
 Group:		Development/Python
 License:	Apache License
 URL:		https://bitbucket.org/tiran/defusedxml
-Source0:	https://files.pythonhosted.org/packages/source/d/defusedxml/defusedxml-%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/0f/d5/c66da9b79e5bdb124974bfe172b4daf3c984ebd9c2a06e2b8a4dc7331c72/defusedxml-0.7.1.tar.gz
 BuildArch:	noarch
 BuildRequires:	python-setuptools
 BuildRequires:	python-devel
