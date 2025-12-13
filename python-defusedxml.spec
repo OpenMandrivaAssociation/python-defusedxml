@@ -1,21 +1,19 @@
-%define modulename defusedxml
+%define module defusedxml
 
-Name:		python-%{modulename}
+Name:		python-%{module}
 Version:	0.7.1
 Release:	3
 Summary:	XML bomb protection for Python stdlib modules
 Group:		Development/Python
 License:	Apache License
-URL:		https://bitbucket.org/tiran/defusedxml
-Source0:	https://files.pythonhosted.org/packages/0f/d5/c66da9b79e5bdb124974bfe172b4daf3c984ebd9c2a06e2b8a4dc7331c72/defusedxml-0.7.1.tar.gz
+URL:		https://github.com/tiran/defusedxml
+Source0:	https://files.pythonhosted.org/packages/source/d/%{module}/%{module}-%{version}.tar.gz
+BuildSystem:	python
 BuildArch:	noarch
-BuildRequires:	python-setuptools
-BuildRequires:	python-devel
-BuildRequires:  python2-devel
-BuildRequires:  python2dist(setuptools)
-BuildRequires:  python3dist(setuptools)	 
- 
-#BuildRequires:	twill
+BuildRequires:	pkgconfig
+BuildRequires:	pkgconfig(python)
+BuildRequires:  python%{pyver}dist(pip)
+BuildRequires:  python%{pyver}dist(setuptools)
 
 %description
 The defusedxml package contains several Python-only workarounds and fixes for
@@ -24,36 +22,18 @@ to benefit from the protection you just have to import and use the listed
 functions / classes from the right defusedxml module instead of the original
 module.
 
-%package -n python2-%{modulename}	 
-Summary:        XML bomb protection for Python stdlib modules	 
-%{?python_provide:%python_provide python2-%{pypi_name}}	 
-	 
-%description -n python2-%{modulename}
-The defusedxml package contains several Python-only workarounds and fixes for	 
-denial of service and other vulnerabilities in Python's XML libraries. In order	 
-to benefit from the protection you just have to import and use the listed	 
-functions / classes from the right defusedxml module instead of the original	 
-module. This is the Python 2 build.
-
 %prep
-%autosetup -n %{modulename}-%{version} -p1
+%autosetup -n %{module}-%{version} -p1
+# Remove bundled egg-info
+rm -rf %{module}.egg-info
 
 %build
 %py_build
-%py2_build
-
-%check
-#python admin/runtests
 
 %install
 %py_install
-%py2_install
 
 %files
-%doc CHANGES.txt LICENSE README.txt
-%{py_puresitedir}/*
-
-%files -n python2-%{modulename} 
-%doc README.txt README.html CHANGES.txt	 
+%doc CHANGES.txt README.txt
 %license LICENSE
-%{py2_puresitedir}/*
+%{py_puresitedir}/*
