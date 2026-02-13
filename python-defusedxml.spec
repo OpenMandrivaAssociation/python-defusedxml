@@ -1,8 +1,8 @@
 %define module defusedxml
 
-Name:		python-%{module}
+Name:		python-defusedxml
 Version:	0.7.1
-Release:	4
+Release:	5
 Summary:	XML bomb protection for Python stdlib modules
 Group:		Development/Python
 License:	Apache License
@@ -14,6 +14,7 @@ BuildRequires:	pkgconfig
 BuildRequires:	pkgconfig(python)
 BuildRequires:  python%{pyver}dist(pip)
 BuildRequires:  python%{pyver}dist(setuptools)
+BuildRequires:  python%{pyver}dist(wheel)
 
 %description
 The defusedxml package contains several Python-only workarounds and fixes for
@@ -22,16 +23,9 @@ to benefit from the protection you just have to import and use the listed
 functions / classes from the right defusedxml module instead of the original
 module.
 
-%prep
-%autosetup -n %{module}-%{version} -p1
+%prep -a
 # Remove bundled egg-info
 rm -rf %{module}.egg-info
-
-%build
-%py_build
-
-%install
-%py_install
 
 %files
 %doc CHANGES.txt README.txt
