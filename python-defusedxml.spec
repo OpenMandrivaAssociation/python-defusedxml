@@ -2,7 +2,7 @@
 
 Name:		python-defusedxml
 Version:	0.7.1
-Release:	5
+Release:	6
 Summary:	XML bomb protection for Python stdlib modules
 Group:		Development/Python
 License:	Apache License
